@@ -3,8 +3,10 @@
 }
 .back {
     background:url(mainpicture.jpg) no-repeat;
-   background-size: 100%;
-   opacity: 0.9;
+    background-color:rgba(0, 0, 0, 0.00);
+   background-size: 100%,100%;
+   
+   
 }
 
 .div {

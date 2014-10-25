@@ -8,7 +8,7 @@
     <title></title>
     <link href="mainform.css" rel="stylesheet"/>
 </head>
-<body class="back">
+<body class="back">    
     <form id="form1" runat="server">
     <div class="div">
      <button value="Home" type="button" class="highbutton btn-6d marg">Home</button>                   
@@ -19,5 +19,6 @@
             <button value="Registr" type="button" class="registrbutton btn">Registration</button>    
            <p class="textor">or<button value="next" type="button" class="enterbutton" >Enter</button></p>    
     </form>
+    
 </body>
 </html>
