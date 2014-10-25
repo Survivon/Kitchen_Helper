@@ -13,5 +13,13 @@ namespace KHelper
         {
 
         }
+
+        private void enterclick() 
+        {
+            if (ClientID == "clickenter") 
+            {
+                
+            }
+        }
     }
 }

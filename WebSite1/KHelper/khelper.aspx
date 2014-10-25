@@ -17,7 +17,7 @@
             </div>
             <p class="textunderbutton">Kitchen Helper - easy to cook!</p>         
             <button value="Registr" type="button" class="registrbutton btn">Registration</button>    
-           <p class="textor">or<button value="next" type="button" class="enterbutton" >Enter</button></p>    
+           <p class="textor">or<button value="next" type="button" class="enterbutton" id="clickenter" >Enter</button></p>    
     </form>
     
 </body>
