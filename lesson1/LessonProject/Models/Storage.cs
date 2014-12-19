@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Kitchen_Helper.Models
+namespace KH.Models
 {
     class Storage
     {
         public int id { get; set; }
 
-        public string productname { get; set; }
+        public string nameproduct { get; set; }
 
         public int count { get; set; }
 

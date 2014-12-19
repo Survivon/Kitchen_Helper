@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Kitchen_Helper.App_Start;
+using KH.App_Start;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(PreStartApp), "Start")]
-namespace Kitchen_Helper.App_Start
+namespace KH.App_Start
 {
     public static class PreStartApp
     {

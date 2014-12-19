@@ -8,7 +8,56 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    @RenderBody()
+    <table>
+        <tr>
+            <td>
+                <table class="fixed">
+                    <tr>
+                        <td width="60%">
+                            <form action="" method="post">
+                                <input type="submit" value="Kitchen Helper" />
+                            </form>
+                        </td>
+                        <td width="10%">
+                            <form action="" method="post">
+                                <input type="submit" value="Main page" />
+                            </form>
+                        </td>
+                        <td width="10%">
+                            <form action="" method="post">
+                                <input type="submit" value="Storage" />
+                            </form>
+                        </td>
+                        <td width="10%">
+                            <form action="" method="post">
+                                <input type="submit" value="Recipe" />
+                            </form>
+                        </td>
+                        <td width="10%">
+                            @if (ViewBag.account == true)
+                            {
+                                <label>@ViewBag.Name</label>
+                                <form action="" method="post">
+                                    <input type="submit" value="Log out" />
+                                </form>
+                            }
+                            else
+                            {
+                                <form action="" method="post">
+                                    <input type="submit" value="Log in" />
+                                </form>
+                            }
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @RenderBody()
+            </td>            
+        </tr>
+    </table>   
 
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)

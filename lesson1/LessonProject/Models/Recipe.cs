@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-namespace Kitchen_Helper.Models
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KH.Models
 {
     class Recipe
     {
@@ -10,10 +12,12 @@ namespace Kitchen_Helper.Models
 
         public string name { get; set; }
 
-        public string productname { get; set; }
+        public string product { get; set; }
 
-        public int countproduct { get; set; }
+        public int countprod { get; set; }
 
         public string countname { get; set; }
+
+        public DateTime date { get; set; }
     }
 }

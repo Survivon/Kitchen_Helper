@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Kitchen_Helper
+namespace KH
 {
     public class FilterConfig
     {

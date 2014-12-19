@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Kitchen_Helper.Models
+namespace KH.Models
 {
     class Buylist
     {
         public int id { get; set; }
+
+        public int iduser { get; set; }
 
         public string productname { get; set; }
 
         public int count { get; set; }
 
         public string countname { get; set; }
-
     }
 }

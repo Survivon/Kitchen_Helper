@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Kitchen_Helper.Models
+namespace KH.Models
 {
-    class User
+    public class User
     {
         public int id { get; set; }
 
@@ -17,8 +17,8 @@ namespace Kitchen_Helper.Models
 
         public string password { get; set; }
 
-        public int storage { get; set; }
-
         public string menulist { get; set; }
+
+        public int storage { get; set; }
     }
 }

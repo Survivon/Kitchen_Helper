@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Kitchen_Helper
+namespace KH
 {
     public class BundleConfig
     {

@@ -59,3 +59,9 @@ textarea {
 .validation-summary-valid {
     display: none;
 }
+
+/*-----------------------------------------------------------*/
+table.fixed {
+ width:100%;
+     table-layout: fixed;
+}
