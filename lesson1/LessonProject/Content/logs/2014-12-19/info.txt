@@ -115,3 +115,9 @@
 2014-12-19 22:26:10.3462|INFO|KH.MvcApplication|Application UpdateRequestCache
 2014-12-19 22:26:10.3462|INFO|KH.MvcApplication|Application EndRequest
 2014-12-19 22:26:10.3462|INFO|KH.MvcApplication|Application PreSendRequestHeaders
+2014-12-19 22:46:20.8276|INFO|KH.MvcApplication|Session End
+2014-12-19 22:54:43.0409|INFO|KH.App_Start.PreStartApp|Application PreStart
+2014-12-19 23:02:09.6785|INFO|KH.App_Start.PreStartApp|Application PreStart
+2014-12-19 23:10:48.7933|INFO|KH.MvcApplication|Application Dispose
+2014-12-19 23:10:48.7933|INFO|KH.MvcApplication|Application End
+2014-12-19 23:10:48.7933|INFO|KH.MvcApplication|Application Dispose

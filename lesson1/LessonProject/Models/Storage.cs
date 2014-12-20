@@ -12,7 +12,7 @@ namespace KH.Models
 
         public string nameproduct { get; set; }
 
-        public int count { get; set; }
+        public string count { get; set; }
 
         public string countname { get; set; }
     }

@@ -1,23 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
 namespace KH.Models
 {
-    class Recipe
+    public class Product
     {
         public int id { get; set; }
 
         public string name { get; set; }
 
-        public string product { get; set; }
-
-        public string countprod { get; set; }
+        public int count { get; set; }
 
         public string countname { get; set; }
 
-        public DateTime date { get; set; }
     }
 }

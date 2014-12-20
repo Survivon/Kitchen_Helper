@@ -133,12 +133,18 @@
     <Compile Include="App_Start\PreStartApp.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\RecipeController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Buylist.cs" />
     <Compile Include="Models\KHContext.cs" />
     <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\Storage.cs" />
     <Compile Include="Models\User.cs" />
@@ -214,6 +220,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\Registration.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

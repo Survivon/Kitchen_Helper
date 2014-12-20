@@ -13,5 +13,7 @@ namespace KH.Models
         public string name { get; set; }
 
         public string listrecipe { get; set; }
+
+        public string description { get; set; }
     }
 }

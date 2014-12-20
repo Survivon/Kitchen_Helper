@@ -20,5 +20,7 @@ namespace KH.Models
         public string menulist { get; set; }
 
         public int storage { get; set; }
+
+        public int role { get; set; }
     }
 }
