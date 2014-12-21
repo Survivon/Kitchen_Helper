@@ -13,6 +13,7 @@ namespace KH.Controllers
         //
         // GET: /Registration/
         KHContext K = new KHContext();
+        MainController MC = new MainController();
         public ActionResult Index()
         {
             return View();
@@ -29,8 +30,8 @@ namespace KH.Controllers
             Session["id"] = K.Users.Where(u => u.name == name).FirstOrDefault().id;
             U.storage = K.Users.Where(u => u.name == name).FirstOrDefault().id;
             K.Entry(U).State = EntityState.Modified;
-            K.SaveChanges();
-            return View("../Main/Main");
+            K.SaveChanges();            
+            return MC.MainLoad(K.Users.Where(u => u.name == name).FirstOrDefault().id);
         }
     }
 }
