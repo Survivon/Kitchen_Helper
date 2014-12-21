@@ -20,15 +20,15 @@ namespace KH.Controllers
         [HttpPost]
         public ActionResult Login(string email,string password) 
         {
-            User U = K.User.Where(u=>u.email==email).FirstOrDefault();
+            User U = K.Users.Where(u=>u.email==email).FirstOrDefault();
             if (U == null) 
             {
                 return View();
             }
-            if(password==U.password)
+            if(U.password.Contains(password))
             {
                 Session["id"] = U.id;
-                return View();
+                return View("../Main/Main");
             }
             else
             {

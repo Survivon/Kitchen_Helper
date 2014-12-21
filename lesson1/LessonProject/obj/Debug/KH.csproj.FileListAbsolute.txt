@@ -30,3 +30,9 @@ C:\Users\Дмитрий\Documents\GitHub\Kitchen_Helper\lesson1\LessonProject\bi
 C:\Users\Дмитрий\Documents\GitHub\Kitchen_Helper\lesson1\LessonProject\obj\Debug\KH.csprojResolveAssemblyReference.cache
 C:\Users\Дмитрий\Documents\GitHub\Kitchen_Helper\lesson1\LessonProject\obj\Debug\Lesson1.dll
 C:\Users\Дмитрий\Documents\GitHub\Kitchen_Helper\lesson1\LessonProject\obj\Debug\Lesson1.pdb
+C:\Users\Дмитрий\Documents\GitHub\Kitchen_Helper\lesson1\LessonProject\bin\System.Net.Http.Formatting.dll
+C:\Users\Дмитрий\Documents\GitHub\Kitchen_Helper\lesson1\LessonProject\bin\System.Web.Http.dll
+C:\Users\Дмитрий\Documents\GitHub\Kitchen_Helper\lesson1\LessonProject\bin\System.Web.Http.WebHost.dll
+C:\Users\Дмитрий\Documents\GitHub\Kitchen_Helper\lesson1\LessonProject\bin\System.Net.Http.Formatting.xml
+C:\Users\Дмитрий\Documents\GitHub\Kitchen_Helper\lesson1\LessonProject\bin\System.Web.Http.xml
+C:\Users\Дмитрий\Documents\GitHub\Kitchen_Helper\lesson1\LessonProject\bin\System.Web.Http.WebHost.xml

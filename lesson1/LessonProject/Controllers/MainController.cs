@@ -20,7 +20,7 @@ namespace KH.Controllers
         [HttpPost]
         public ActionResult MainLoad() 
         {
-            User U = K.User.Find(Convert.ToInt32(Session["id"]));            
+            User U = K.Users.Find(Convert.ToInt32(Session["id"]));            
             List<int> listmenu = menulist(U.menulist);
             List<string> listnamemenu = new List<string>();
             foreach (var i in listmenu) 
@@ -87,9 +87,9 @@ namespace KH.Controllers
         [HttpPost]
         public ActionResult DelMenu(int idmenu) 
         {
-            List<int> listmenu = menulist(K.User.Find(Convert.ToInt32(Session["id"])).menulist);
+            List<int> listmenu = menulist(K.Users.Find(Convert.ToInt32(Session["id"])).menulist);
             listmenu.Remove(idmenu);
-            User U = K.User.Find(Convert.ToInt32(Session["id"]));
+            User U = K.Users.Find(Convert.ToInt32(Session["id"]));
             U.menulist = returnmenulist(listmenu);
             K.Entry(U).State = EntityState.Modified;
             K.SaveChanges();
@@ -104,7 +104,7 @@ namespace KH.Controllers
             K.Menu.Add(M);
             K.SaveChanges();
             int id = K.Menu.Where(m => m.name == name).FirstOrDefault().id;
-            User U = K.User.Find(Convert.ToInt32(Session["id"]));
+            User U = K.Users.Find(Convert.ToInt32(Session["id"]));
             U.menulist += Convert.ToString(id) + ';';
             K.Entry(U).State = EntityState.Modified;
             K.SaveChanges();

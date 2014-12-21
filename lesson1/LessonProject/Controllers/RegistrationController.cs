@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using KH.Models;
+using System.Data;
 
 namespace KH.Controllers
 {
@@ -18,13 +19,18 @@ namespace KH.Controllers
         }
 
         [HttpPost]
-        public ActionResult Registration(User U) 
+        public ActionResult Registration(string name,string surname,string email,string password) 
         {
-            U.role = 1;
-            K.User.Add(U);
+            User U = new User { name=name,surname=surname,email=email,password=password,role=1};
+           
+            K.Users.Add(U);
             K.SaveChanges();
-            Session["id"] = K.User.Find(U).id;
-            return View();
+
+            Session["id"] = K.Users.Where(u => u.name == name).FirstOrDefault().id;
+            U.storage = K.Users.Where(u => u.name == name).FirstOrDefault().id;
+            K.Entry(U).State = EntityState.Modified;
+            K.SaveChanges();
+            return View("../Main/Main");
         }
     }
 }
