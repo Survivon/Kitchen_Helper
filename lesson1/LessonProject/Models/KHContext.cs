@@ -10,7 +10,7 @@ namespace KH.Models
     class KHContext: DbContext
     {
         public DbSet<User> Users { get; set; }
-        public DbSet<Storage> Storage { get; set; }
+        public DbSet<Storage> Storages { get; set; }
         public DbSet<Recipe> Recipe { get; set; }
         public DbSet<Menu> Menu { get; set; }
         public DbSet<Buylist> Buylist { get; set; }

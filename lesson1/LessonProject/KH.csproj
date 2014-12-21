@@ -155,6 +155,9 @@
     <Content Include="App_Data\KHDB_log.ldf">
       <DependentUpon>KHDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\images\mainbackground.jpg" />
+    <Content Include="Content\layout.css" />
+    <Content Include="Content\style-form.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -224,6 +227,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Login\Registration.cshtml" />
     <Content Include="Views\Main\Main.cshtml" />
+    <Content Include="Views\Shared\mainlayout.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

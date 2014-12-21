@@ -18,40 +18,46 @@ namespace KH.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult MainLoad() 
+        public ActionResult MainLoad(int id) 
         {
-            User U = K.Users.Find(Convert.ToInt32(Session["id"]));            
+            User U = new Models.User();
+            if (id!=null)
+                U = K.Users.Find(id);
+            else
+                U = K.Users.Find(Convert.ToInt32(Session["id"]));
             List<int> listmenu = menulist(U.menulist);
             List<string> listnamemenu = new List<string>();
             foreach (var i in listmenu) 
             {
                 listnamemenu.Add(K.Menu.Where(m => m.id == i).FirstOrDefault().name);
             }
-
+            ViewBag.listmenu = listmenu;
+            ViewBag.listnamemenu = listnamemenu;
             int idstorage = U.storage;
-            Storage ProductinStorage = K.Storage.Where(s => s.id == idstorage).FirstOrDefault();
-            List<string> nameproduct = stringconvector(ProductinStorage.nameproduct);
-            List<int> countproduct = menulist(ProductinStorage.count);
-            List<string> countname = stringconvector(ProductinStorage.countname);
+            Storage ProductinStorage = K.Storages.Where(s => s.id == idstorage).FirstOrDefault();
+            ViewBag.nameproduct = stringconvector(ProductinStorage.nameproduct);
+            ViewBag.countproduct = menulist(ProductinStorage.count);
+            ViewBag.countname = stringconvector(ProductinStorage.countname);
 
-            return View();
+            return View("../Main/Main");
         }
 
         private List<string> stringconvector(string list) 
         {
             List<string> liststring = new List<string>();
             list += '#';
-            int i = 0;
-            string localstr = "";
-            while (list[i] != '#')
+            int count = 0;            
+            while (list[count] != '#')
             {
-                localstr += list[i];
-                if (list[i] == ';')
+                int i = count;
+                string idfriends = "";
+                while (list[i] != ';')
                 {
+                    idfriends += list[i];
                     i++;
-                    liststring.Add(localstr);
                 }
-                i++;
+                liststring.Add(idfriends);
+                count = i + 1;
             }
             return liststring;
         }
@@ -60,17 +66,18 @@ namespace KH.Controllers
         {
             List<int> listmenu = new List<int>();
             list += '#';
-            int i =0;
-            string localstr = "";
-            while (list[i] != '#') 
+            int count = 0;
+            while (list[count] != '#')
             {
-                localstr += list[i];
-                if (list[i] == ';') 
+                int i = count;
+                string idfriends = "";
+                while (list[i] != ';')
                 {
+                    idfriends += list[i];
                     i++;
-                    listmenu.Add(Convert.ToInt32(localstr));
                 }
-                i++;
+                listmenu.Add(Convert.ToInt32(idfriends));
+                count = i + 1;
             }
             return listmenu;
         }
@@ -93,7 +100,7 @@ namespace KH.Controllers
             U.menulist = returnmenulist(listmenu);
             K.Entry(U).State = EntityState.Modified;
             K.SaveChanges();
-            return MainLoad();
+            return MainLoad(Convert.ToInt32(Session["id"]));
         }
 
         [HttpPost]
@@ -108,7 +115,7 @@ namespace KH.Controllers
             U.menulist += Convert.ToString(id) + ';';
             K.Entry(U).State = EntityState.Modified;
             K.SaveChanges();
-            return MainLoad();
+            return MainLoad(Convert.ToInt32(Session["id"]));
         }
 
     }

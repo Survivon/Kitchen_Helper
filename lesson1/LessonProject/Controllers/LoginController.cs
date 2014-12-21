@@ -13,6 +13,7 @@ namespace KH.Controllers
         //
         // GET: /Login/
         KHContext K = new KHContext();
+        MainController MC = new MainController();
         public ActionResult Index()
         {
             return View();
@@ -28,7 +29,7 @@ namespace KH.Controllers
             if(U.password.Contains(password))
             {
                 Session["id"] = U.id;
-                return View("../Main/Main");
+                return MC.MainLoad(U.id);
             }
             else
             {

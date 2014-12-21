@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/themes/base/css", "~/Content/css")
+    @Styles.Render("~/Content/layout.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -14,23 +15,21 @@
                 <table class="fixed">
                     <tr>
                         <td width="60%">
+                            <h1>Kitchen Helper</h1>
+                        </td>
+                        <td width="10%">
                             <form action="" method="post">
-                                <input type="submit" value="Kitchen Helper" />
+                                <input type="submit" value="Main page" class="button9" />
                             </form>
                         </td>
                         <td width="10%">
                             <form action="" method="post">
-                                <input type="submit" value="Main page" />
+                                <input type="submit" value="Buy List" class="button9" />
                             </form>
                         </td>
                         <td width="10%">
                             <form action="" method="post">
-                                <input type="submit" value="Buy List" />
-                            </form>
-                        </td>
-                        <td width="10%">
-                            <form action="" method="post">
-                                <input type="submit" value="Recipe" />
+                                <input type="submit" value="Recipe" class="button9" />
                             </form>
                         </td>
                         <td width="10%">
@@ -38,13 +37,13 @@
                             {
                                 <label>@ViewBag.Name</label>
                                 <form action="" method="post">
-                                    <input type="submit" value="Log out" />
+                                    <input type="submit" value="Log out" class="button9" />
                                 </form>
                             }
                             else
                             {
                                 <form action="" method="post">
-                                    <input type="submit" value="Log in" />
+                                    <input type="submit" value="Log in" class="button9" />
                                 </form>
                             }
                         </td>

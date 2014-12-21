@@ -2,4 +2,51 @@
     ViewBag.Title = "Main";
 }
 
-<h2>Main</h2>
+<table>
+    <tr>
+        <td>
+            <div class="blok">
+                Storage
+                <table>
+                    @for (int i = 0; i < ViewBag.nameproduct.Count; i++) 
+                    {
+                        <tr>
+                            <td>
+                                @ViewBag.nameproduct[i]
+                            </td>
+                            <td>
+                                @ViewBag.countproduct[i]
+                            </td>
+                            <td>
+                                @ViewBag.countname[i]
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </td>
+        <td>
+            <div class="blok">
+                <table>
+                    @for (int i = 0; i < ViewBag.listmenu.Count; i++)
+                    {
+                        
+                            <tr>
+                                <form action="" method="post">
+                                    <td>
+                                        @ViewBag.listnamemenu[i]
+                                </td>
+                                    <td>
+                                        <input type="hidden" name="idmenu" value="@ViewBag.listmenu[i]"/>
+                                        <input type="submit" value="View" />
+                                    </td>
+                            </form>
+
+                            </tr>
+                       
+                    }
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
