@@ -11,7 +11,7 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KH</RootNamespace>
+    <RootNamespace>KHMobile</RootNamespace>
     <AssemblyName>Lesson1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
@@ -138,6 +138,7 @@
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\RecipeController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="Controllers\StorageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -155,7 +156,9 @@
     <Content Include="App_Data\KHDB_log.ldf">
       <DependentUpon>KHDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\animated-menu.css" />
     <Content Include="Content\images\mainbackground.jpg" />
+    <Content Include="Content\images\notepad.jpg" />
     <Content Include="Content\layout.css" />
     <Content Include="Content\style-form.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -187,7 +190,9 @@
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Properties\PublishProfiles\profil1.pubxml" />
     <None Include="Scripts\jquery-1.6.2-vsdoc.js" />
+    <Content Include="Scripts\animated-menu.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js">
       <DependentUpon>jquery-1.6.2.js</DependentUpon>
@@ -228,6 +233,11 @@
     <Content Include="Views\Login\Registration.cshtml" />
     <Content Include="Views\Main\Main.cshtml" />
     <Content Include="Views\Shared\mainlayout.cshtml" />
+    <Content Include="Views\Menus\Menu.cshtml" />
+    <Content Include="Views\Resipe\Recipe.cshtml" />
+    <Content Include="Views\Resipe\RecipeInfo.cshtml" />
+    <Content Include="Views\Resipe\NewRecipe.cshtml" />
+    <Content Include="Views\Buylist\RecipeBuylist.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

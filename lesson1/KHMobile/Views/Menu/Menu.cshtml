@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Menu";
+}
+
+<h2>ViewBag.name</h2>
+<h3>ViewBag.desc</h3>
+<table>
+    @foreach (var i in ViewBag.recipe) 
+    {
+        <tr>
+            <td><form action="" method="post">
+                <input type="hidden" name="idrecipe" value="@i.id" />
+                <input type="submit" value="@i.name" />
+                </form></td>
+        </tr>
+    }
+</table>

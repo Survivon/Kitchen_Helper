@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Main";
+}
+
+<table class="aligntable">
+    <tr>
+        <td class="aligntable">
+            <div class="blok">
+                <h2>Storage</h2>
+                <table class="fixed">
+                    @if (ViewBag.boolload == "true")
+                    {
+                        <tr>
+                            <td width="100%">
+                                add
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        for (int i = 0; i < ViewBag.nameproduct.Count; i++)
+                        {
+                            <tr>
+                                <td width="50%">
+                                    @ViewBag.nameproduct[i]
+                                </td>
+                                <td width="15%">
+                                    @ViewBag.countproduct[i]
+                                </td>
+                                <td width="15%">
+                                    @ViewBag.countname[i]
+                                </td>
+                                <td>
+                                    <form action="/Storage/Del" method="post">
+                                        <input type="hidden" name="idproduct" value="@ViewBag.idproduct[i]" />
+                                        <input type="submit" value="Delete">
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+        </td>
+        <td>
+            <div class="blok">
+                <h2>List menu</h2>
+                <table>
+                    @for (int i = 0; i < ViewBag.listmenu.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                <form action="/Menu/MenuEditor" method="post">
+                                    <input type="hidden" name="idmenu" value="@ViewBag.listmenu[i]" />
+                                    <input type="submit" value="@ViewBag.listnamemenu[i]" class="link">
+                                </form>
+                            </td>
+
+
+                        </tr>
+
+                    }
+                </table>
+                <hr />
+                <form action="/Menu/AddnewMenu" method="post">
+                    <table>
+                        <tr>
+                            <td>
+                                Add new menu:
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="name" placeholder="menus' name" type="text" class="inputtext" required/>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea name="description" placeholder="description name..." cols="40"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Add menu" class="link" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </td>
+    </tr>
+</table>

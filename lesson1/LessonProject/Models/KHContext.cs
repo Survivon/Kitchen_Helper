@@ -11,9 +11,9 @@ namespace KH.Models
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Storage> Storages { get; set; }
-        public DbSet<Recipe> Recipe { get; set; }
-        public DbSet<Menu> Menu { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<Menu> Menus { get; set; }
         public DbSet<Buylist> Buylist { get; set; }
-        public DbSet<Product> Product { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

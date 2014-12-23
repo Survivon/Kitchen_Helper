@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = ViewBag.name;
+}
+<div class="blok">
+    <h1>@ViewBag.name</h1>
+    <h2>Description</h2>
+    <h3>     @ViewBag.desc</h3>
+    <h2>Ingredients</h2>
+    <table>
+        @for (int i = 0; i < ViewBag.count.Count; i++)
+        {
+            <tr>
+                <td>@ViewBag.nameproduct[i]</td>
+                <td>@ViewBag.count[i]</td>
+                <td>@ViewBag.countname[i]</td>
+        </tr>
+        }
+    </table>
+    <form action="/Storage/cook" method="post">
+        <input type="hidden" name="idrecipe" value="@ViewBag.idrecipe" />
+        <input type="submit" value="Cook" class="myButton" />
+    </form>
+</div>

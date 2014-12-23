@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Storage";
+}
+
+<h2>Storage</h2>
+
+<form action="/Storage/Add" method="post">
+    <input type="text" name="productname" placeholder="Enter product..." />
+    <input type="number" name="count" placeholder="Count..." />
+    <input type="text" name="countname" placeholder="Scales..." />
+    <input type="submit" value="Add product" />
+</form>
+<hr/>
+<table class="fixed">
+    @foreach (var i in ViewBag.Product) 
+    {
+        <tr>
+            <td width="50%">
+               <h3>@i.name</h3> 
+            </td>
+            <td width="10%">
+                @i.count
+            </td>
+            <td width="20%">
+                @i.countname
+            </td>
+            <td width="20%">
+                <form action="/Storage/Del" method="post">
+                    <input type="hidden" name="idproduct" value="@i.id" />
+                    <input type="submit" value="delete" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>

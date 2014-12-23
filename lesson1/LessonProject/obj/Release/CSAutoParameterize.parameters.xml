@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="KHContext-Web.config Connection String" description="KHContext Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="Data Source=(LocalDb)\v11.0;AttachDBFilename=|DataDirectory|\KHDB.mdf;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Дмитрий\\Documents\\GitHub\\Kitchen_Helper\\lesson1\\LessonProject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='KHContext']/@connectionString" />
+  </parameter>
+</parameters>

@@ -15,5 +15,7 @@ namespace KH.Models
 
         public string countname { get; set; }
 
+        public bool type { get; set; }
+
     }
 }

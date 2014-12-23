@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "RecipeBuylist";
+}
+
+<div class="blok">
+    <h2>You need buy: </h2>
+    <table>
+        @foreach (var i in ViewBag.product)
+        {
+            <tr>
+                <td>
+                    @i.name
+                </td>
+                <td>
+                    @i.count
+                </td>
+                <td>
+                    @i.countname
+            </td>
+        </tr>
+        }
+    </table>
+</div>

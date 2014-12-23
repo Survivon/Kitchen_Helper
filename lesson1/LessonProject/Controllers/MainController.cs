@@ -29,16 +29,33 @@ namespace KH.Controllers
             List<string> listnamemenu = new List<string>();
             foreach (var i in listmenu) 
             {
-                listnamemenu.Add(K.Menu.Where(m => m.id == i).FirstOrDefault().name);
+                listnamemenu.Add(K.Menus.Where(m => m.id == i).FirstOrDefault().name);
             }
             ViewBag.listmenu = listmenu;
             ViewBag.listnamemenu = listnamemenu;
             int idstorage = U.storage;
             Storage ProductinStorage = K.Storages.Where(s => s.id == idstorage).FirstOrDefault();
-            ViewBag.nameproduct = stringconvector(ProductinStorage.nameproduct);
-            ViewBag.countproduct = menulist(ProductinStorage.count);
-            ViewBag.countname = stringconvector(ProductinStorage.countname);
-
+            if (ProductinStorage == null) 
+            {
+                ViewBag.boolload = "true";
+                return View("../Main/Main");
+            }
+            
+            string storageproductid = ProductinStorage.nameproduct;
+            List<int> idproduct = menulist(storageproductid);
+            List<string> nameproduct = new List<string>();
+            List<int> countproduct = new List<int>();
+            List<string> countname = new List<string>();
+            foreach(var i in idproduct)
+            {
+                nameproduct.Add(K.Products.Find(i).name);
+                countproduct.Add(K.Products.Find(i).count);
+                countname.Add(K.Products.Find(i).countname);
+            }
+            ViewBag.nameproduct = nameproduct;
+            ViewBag.idproduct = idproduct;
+            ViewBag.countproduct = countproduct;
+            ViewBag.countname = countname;
             return View("../Main/Main");
         }
 
@@ -108,15 +125,15 @@ namespace KH.Controllers
         {
             Menu M = new Menu { name=name,
             description=description};
-            K.Menu.Add(M);
+            K.Menus.Add(M);
             K.SaveChanges();
-            int id = K.Menu.Where(m => m.name == name).FirstOrDefault().id;
+            int id = K.Menus.Where(m => m.name == name).FirstOrDefault().id;
             User U = K.Users.Find(Convert.ToInt32(Session["id"]));
             U.menulist += Convert.ToString(id) + ';';
             K.Entry(U).State = EntityState.Modified;
             K.SaveChanges();
             return MainLoad(Convert.ToInt32(Session["id"]));
         }
-
+        
     }
 }

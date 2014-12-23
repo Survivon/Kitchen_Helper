@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="http://kitchenhelper.somee.com" />
+  <setParameter name="KHContext-Web.config Connection String" value="Data Source=(LocalDb)\v11.0;AttachDBFilename=|DataDirectory|\KHDB.mdf;Integrated Security=True" />
+</parameters>

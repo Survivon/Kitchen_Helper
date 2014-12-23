@@ -14,11 +14,12 @@
             <td>
                 <table class="fixed">
                     <tr>
-                        <td width="60%">
+                        <td width="70%">
                             <h1>Kitchen Helper</h1>
                         </td>
                         <td width="10%">
-                            <form action="" method="post">
+                            <form action="/Main/MainLoad" method="post">
+                                <input type="hidden" name="id" value="@Convert.ToInt32(Session["id"])" />
                                 <input type="submit" value="Main page" class="button9" />
                             </form>
                         </td>
@@ -28,25 +29,10 @@
                             </form>
                         </td>
                         <td width="10%">
-                            <form action="" method="post">
+                            <form action="/Recipe/AllRecipe" method="post">
                                 <input type="submit" value="Recipe" class="button9" />
                             </form>
-                        </td>
-                        <td width="10%">
-                            @if (ViewBag.account == true)
-                            {
-                                <label>@ViewBag.Name</label>
-                                <form action="" method="post">
-                                    <input type="submit" value="Log out" class="button9" />
-                                </form>
-                            }
-                            else
-                            {
-                                <form action="" method="post">
-                                    <input type="submit" value="Log in" class="button9" />
-                                </form>
-                            }
-                        </td>
+                        </td>                        
                     </tr>
                 </table>
             </td>

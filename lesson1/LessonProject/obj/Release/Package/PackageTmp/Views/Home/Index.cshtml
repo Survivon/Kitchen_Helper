@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Kitchen Helper";
+    Layout = "~/Views/Shared/mainlayout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/style-form.css" media="screen" type="text/css" /> 
+<table class="fixed">
+    <tr>
+        <td width="70%" height="40%">
+            <h1>Kitchen Helper</h1>
+        </td>
+        <td width="30%" height="40%"></td>
+    </tr>
+    <tr>
+        <td width="70%" height="40%"></td>
+        <td width="30%" height="40%">
+            <form id="login" action="/Login/Login" method="post">
+                <h1>Log in</h1>
+                <fieldset id="inputs">
+                    <input id="username" placeholder="Email" autofocus="" required="" type="email" name="email">
+                    <input id="password" placeholder="Password" required="" type="password" name="password">
+                </fieldset>
+                <fieldset id="actions">
+                    <input id="submit" value="Log in" type="submit">                    
+                </fieldset>
+            </form>
+            <form action="/Login/Registration" method="post">
+                <input type="submit" value="Registration" id="submit" class="marginreg" />
+            </form>
+        </td>
+    </tr>
+</table>

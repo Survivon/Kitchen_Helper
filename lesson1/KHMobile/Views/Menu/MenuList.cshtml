@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "MenuList";
+}
+
+<h2>MenuList</h2>
+
+<table>
+    @for (int i = 0; i < ViewBag.listmenu.Count; i++) 
+    {
+        <tr>
+            <td>
+                <form action="/Menu/Menu" method="post">
+                    <input type="hidden" name="idmenu" value="@ViewBag.listmenu[i]"/>
+                    <input type="submit" value="@ViewBag.listnamemenu[i]"/>
+                </form>               
+            </td>
+            <td>
+                <form action="/Menu/Del" method="post">
+                    <input type="hidden" name="id" value="@ViewBag.listmenu[i]" />
+                    <input type="submit" value="Delete" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>

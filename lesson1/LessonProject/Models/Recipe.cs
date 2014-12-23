@@ -14,10 +14,7 @@ namespace KH.Models
 
         public string product { get; set; }
 
-        public string countprod { get; set; }
+        public string description { get; set; }
 
-        public string countname { get; set; }
-
-        public DateTime date { get; set; }
     }
 }

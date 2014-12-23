@@ -1,0 +1,300 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+.inputtext {
+    width:200px;
+    height:35px;
+    border:1px #078c07;
+}
+.inputtext:focus{
+    border:1px #096609;
+}
+.myButton {
+	-moz-box-shadow: 6px 12px 14px -7px #2a4d2c;
+	-webkit-box-shadow: 6px 12px 14px -7px #2a4d2c;
+	box-shadow: 6px 12px 14px -7px #2a4d2c;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #078c07), color-stop(1, #096609));
+	background:-moz-linear-gradient(top, #078c07 5%, #096609 100%);
+	background:-webkit-linear-gradient(top, #078c07 5%, #096609 100%);
+	background:-o-linear-gradient(top, #078c07 5%, #096609 100%);
+	background:-ms-linear-gradient(top, #078c07 5%, #096609 100%);
+	background:linear-gradient(to bottom, #078c07 5%, #096609 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#078c07', endColorstr='#096609',GradientType=0);
+	background-color:#078c07;
+	-moz-border-radius:13px;
+	-webkit-border-radius:13px;
+	border-radius:13px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:21px;
+	font-weight:bold;
+	padding:9px 43px;
+	text-decoration:none;
+	text-shadow:3px 3px 5px #066106;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #096609), color-stop(1, #078c07));
+	background:-moz-linear-gradient(top, #096609 5%, #078c07 100%);
+	background:-webkit-linear-gradient(top, #096609 5%, #078c07 100%);
+	background:-o-linear-gradient(top, #096609 5%, #078c07 100%);
+	background:-ms-linear-gradient(top, #096609 5%, #078c07 100%);
+	background:linear-gradient(to bottom, #096609 5%, #078c07 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#096609', endColorstr='#078c07',GradientType=0);
+	background-color:#096609;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/*-----------------------------------------------------------*/
+table.fixed {
+ width:100%;
+     table-layout: fixed;   
+     
+}
+.aligntable {
+    vertical-align: top;
+}
+
+.regdiv {
+    margin-left:40%;
+    margin-top:5%;
+    background-color:#faeded;
+    width:350px;
+    
+    border-radius:5px;
+}
+.blok {
+margin-left:40%;
+    margin-top:5%;
+    background-color:#faeded;
+    width:350px;
+    background-image:url(images/notepad.jpg);
+    background-repeat:no-repeat;
+    border-radius:5px;
+
+padding:1em;
+
+background:#fff;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.blok:before,
+.blok:after {
+content:"";
+position:absolute;
+z-index:-2;
+}
+
+.blok p {
+font-size:16px;
+font-weight:bold;
+}
+.style-4 {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  outline:none;
+  width:100%;
+}
+.style-4  {
+  border-bottom: solid 2px #969696;
+  outline:none;
+}
+
+/* Button 4 */
+.btn-4 {
+	border-radius: 50px;
+	border: 3px solid #fff;
+	color: #fff;
+	overflow: hidden;
+}
+
+.btn-4:active {
+	border-color: #17954c;
+	color: #17954c;
+}
+
+.btn-4:hover {
+	background: #24b662;
+}
+
+.btn-4:before {
+	position: absolute;
+	height: 100%;
+	font-size: 125%;
+	line-height: 3.5;
+	color: #fff;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-4:active:before {
+	color: #17954c;
+}
+
+/* Button 4a */
+.btn-4a:before {
+	left: 130%;
+	top: 0;
+}
+
+.btn-4a:hover:before {
+	left: 80%;
+}
+.icon-arrow-right:before {
+	content: "\e00d";
+}
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+input.link {
+  /* Первые два свойства нужны чтобы убрать отступы в IE */
+  overflow: visible;
+  width: auto;
+ 
+  /* Убираем отступы */
+  margin: 0;
+  padding: 0;
+ 
+  /* Убираем все элементы оформления кнопки */
+  background: none;
+  border: none;
+ 
+  /* Обычный для ссылок курсор */
+  cursor: pointer;
+  font-size:xx-large;
+  color:#078c07;
+}
+ 
+/* Ссылка обычно подчеркнута */
+input.link span {
+  color: #00f;
+  text-decoration: underline;
+}
+    input.link:hover {
+        color:#096609;
+        border: 0;
+outline: 0;
+    }
+
+    /* Button 7 */
+.btn-7 {
+	background: #17aa56;
+	color: #fff;
+	border-radius: 7px;
+	box-shadow: 0 5px #119e4d;
+	padding: 25px 60px 25px 90px;
+    width:5px;
+    height:10px;
+}
+
+/* Button 7a */
+.btn-7a {
+	overflow: hidden;
+}
+
+.btn-7a:before {
+	position: absolute;
+	left: 0;
+	width: 40%;
+	font-size: 160%;
+	line-height: 0.8;
+	color: #0a833d;
+}
+
+.btn-7a.btn-activated {
+	-webkit-animation: fadeOutText 0.5s;
+	-moz-animation: fadeOutText 0.5s;
+	animation: fadeOutText 0.5s;
+}
+
+.btn-7a.btn-activated:before {
+	-webkit-animation: moveToRight 0.5s;
+	-moz-animation: moveToRight 0.5s;
+	animation: moveToRight 0.5s;
+}

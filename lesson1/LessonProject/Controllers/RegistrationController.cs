@@ -22,9 +22,9 @@ namespace KH.Controllers
         [HttpPost]
         public ActionResult Registration(string name,string surname,string email,string password) 
         {
-            User U = new User { name=name,surname=surname,email=email,password=password,role=1};
-           
-            K.Users.Add(U);
+            User U = new User { name=name,surname=surname,email=email,password=password,role=1};           
+            
+            K.Entry(U).State = EntityState.Added;
             K.SaveChanges();
 
             Session["id"] = K.Users.Where(u => u.name == name).FirstOrDefault().id;
